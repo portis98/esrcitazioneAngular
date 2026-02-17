@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Todo } from './Todo';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-todos',
-  imports: [MatCheckboxModule, NgClass],
+  imports: [MatCheckboxModule, NgClass, FormsModule],
   templateUrl: './todos.html',
   styleUrl: './todos.css',
 })
@@ -37,5 +38,11 @@ export class Todos {
   this.todos = this.todos.filter(
     (objetItem: Todo): boolean => objetItem !== todo
     );
+  }
+  enableEdit(todo: Todo): void {
+  todo.edited = true;
+  }
+  saveEdit(todo: Todo): void {
+    todo.edited = false;
   }
 }
