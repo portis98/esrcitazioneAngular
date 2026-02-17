@@ -13,3 +13,19 @@
  color: white;
  border: none;
 }
+.modified {
+ background-color: darkblue;
+ border-radius: 0.5rem;
+ padding: 0.5rem;
+ color: white;
+ border: none;
+}
+.completed1 {
+ border-radius: 0.5rem;
+ padding: 0.5rem;
+ transition: .15s ease;
+}
+
+.fa-solid {
+    width: 2.0rem;
+}

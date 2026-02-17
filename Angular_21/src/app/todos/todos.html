@@ -34,13 +34,13 @@
       <div class="col-2 text-center">
         @if (!todo.edited) {
           <button
-            class="fa-solid fa-pen-to-square"
+            class="fa-solid fa-pen-to-square modified"
             (click)="enableEdit(todo)"
           ></button>
         }
         @if (todo.edited) {
           <button
-            class="fa-solid fa-check text-success"
+            class="fa-solid fa-check text-success completed1"
             (click)="saveEdit(todo)"
           ></button>
         }

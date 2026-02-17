@@ -1,59 +1,125 @@
-# Angular21
+# Esercitazione Angular - Todo List
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Applicazione Angular moderna per la gestione di una lista di cose da fare con Angular 21, Bootstrap e Material Design.
 
-## Development server
+## 📋 Prerequisiti
 
-To start a local development server, run:
+Prima di iniziare, assicurati di avere installato:
+
+- **Node.js** versione 18+ 
+- **npm** (fornito con Node.js)
+- **Angular CLI**: `npm install -g @angular/cli`
+
+## Avvio Rapido
 
 ```bash
+# Installa dipendenze
+npm install
+
+# Avvia il server di sviluppo
+ng serve --open
+```
+
+L'app si aprirà automaticamente al browser all'indirizzo http://localhost:4200/
+
+## 📁 Struttura del Progetto
+
+```
+src/
+├── app/
+│   ├── app.ts              # Componente root
+│   ├── app.html            # Template root
+│   ├── app.css             
+│   ├── todos/              # Componente Todo
+│   │   ├── todos.ts        
+│   │   ├── todos.html
+│   │   ├── todos.css
+│   │   └── Todo.ts         # Interfaccia
+│   └── app.routes.ts       # Configurazione routing
+├── main.ts                 # Entry point
+├── index.html
+├── styles.css
+└── material-theme.scss
+```
+
+## ✨ Caratteristiche
+
+- ✅ Visualizzazione lista Todo predefinita
+- ✅ Completa/scompleta todo con checkbox Material
+- ✅ Modifica titolo todo (click matita)
+- ✅ Elimina todo (click cestino)
+- ✅ Interfaccia responsive con Bootstrap e Material Design
+- ✅ Icone Font Awesome
+
+## 🛠️ Comandi Angular CLI
+
+```bash
+# Avvia server di sviluppo  
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Build per produzione
 ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
+# Run unit tests
 ng test
+
+# Genera nuovo componente
+ng generate component nome-componente
 ```
 
-## Running end-to-end tests
+## 💡 Come Usare l'App
 
-For end-to-end (e2e) testing, run:
+1. **Checkbox** - Clicca per segnare todo come completato/non completato
+2. **Titolo** - Visualizza ID e titolo del todo  
+3. **Icona Cestino** - Elimina il todo dalla lista
+4. **Icona Matita** - Abilita editing del titolo
+5. **Icona Check** (in editing) - Salva le modifiche
+
+## 📦 Dipendenze
+
+- Angular 21
+- Bootstrap 5  
+- Angular Material
+- Font Awesome 
+- Popper.js (richiesto da Bootstrap)
+
+## 🐛 Troubleshooting
+
+**"ng command not found"**
+```bash
+npm install -g @angular/cli
+```
+
+**Porta 4200 occupata**
+```bash
+ng serve --port 4201
+```
+
+**Reinstallare dipendenze**
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+## 📝 Note Importanti
+
+- Bootstrap e Popper.js sono caricati tramite gli script in `angular.json`
+- Componenti standalone senza NgModule
+- Control flow moderni: `@if`, `@for` (non *ngIf, *ngFor)
+- FormsModule importato per il two-way binding `[(ngModel)]`
+
+## 👨‍💻 Aggiungere Nuove Feature
 
 ```bash
-ng e2e
+# Crea nuovo componente
+ng generate component nome-componente
+
+# Modifica la logica in .ts
+# Personalizza il template .html  
+# Aggiungi stili in .css
+# Importa il componente dove serve
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Documentazione:** https://angular.io/docs
