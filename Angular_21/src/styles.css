@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/amoera');
+html, body {
+ height: 100%;
+}
+* {
+ font-family: 'Manifestor', sans-serif;
+ font-weight: 400;
+ color: black;
+}
