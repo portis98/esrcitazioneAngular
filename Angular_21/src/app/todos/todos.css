@@ -1,0 +1,15 @@
+.completed {
+ background-color: green;
+ border-radius: 1rem;
+ transition: .15s ease;
+}
+.completed > * span {
+ color: white;
+}
+.delete {
+ background-color: darkred;
+ border-radius: 0.5rem;
+ padding: 0.5rem;
+ color: white;
+ border: none;
+}
