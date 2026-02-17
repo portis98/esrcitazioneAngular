@@ -8,5 +8,5 @@ import { Todos } from './todos/todos';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Esercitaziopne 1');
+  protected readonly title = signal('Esercitazione 1');
 }
